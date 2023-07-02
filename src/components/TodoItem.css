@@ -1,0 +1,52 @@
+.todo__item{
+    height:2rem;
+    margin:0 0 1rem 0;
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中对齐 */
+  }
+  .todo__item__label{
+    font-size:20px;
+    color:white;
+    line-height: 2rem;
+    margin-left:1rem;
+  }
+  .todo__item__delete{
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    border:none;
+    background-color: red;
+    cursor: pointer;
+  }
+  .todo__item__check{
+    -webkit-appearance: none; /* 去除默认样式 */
+    -moz-appearance: none;
+    appearance: none;
+    width: 2rem; /* 设置复选框的宽度和高度 */
+    height: 2rem;
+    display: inline;
+    background-color: azure;
+    /* border: 2px solid #ccc; 设置边框样式 */
+    border-radius: 50%; /* 将边框半径设置为50%以将复选框变为圆形 */
+    outline: none; /* 去除选中时的外边框 */
+    position: relative; /* 相对定位，用于定位伪元素 */
+    cursor: pointer; /* 鼠标指针样式为手型 */
+  }
+  
+  .todo__item__check::before {
+    content: ""; /* 添加伪元素的内容 */
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 位于垂直中心位置 */
+    left: 50%; /* 位于水平中心位置 */
+    transform: translate(-50%, -50%); /*平移至居中位置*/
+    width: 70%; /* 设置内部勾选图标的宽度 */
+    height: 70%; /* 设置内部勾选图标的高度 */
+    background-color: #a3a3a3; /* 设置内部勾选图标的背景颜色 */
+    border-radius: 50%; /* 将内部勾选图标的边框半径设置为50%，使其成为圆形 */
+    opacity: 0; /* 默认隐藏内部勾选图标 */
+  }
+  
+  .todo__item__check:checked::before {
+    opacity: 1; /* 选中时显示内部勾选图标 */
+  }
+  

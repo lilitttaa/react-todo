@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+body{
+
+}
+.todo__app{
+  background: rgb(0,159,231);
+  background: linear-gradient(326deg, rgba(147,13,224,1) 0%, rgba(0,159,231,1) 15%, rgba(0,222,223,1) 50%, rgba(156,0,224,1) 100%);
+  background-repeat:no-repeat;
+  background-size: 100% 600%;
+  min-height: 100%;
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:0;
+  user-select: none;
+}
+.todo__container {
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.363);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin:5% 30%;
+  width:auto;
+  height:70%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 8%;
+}
+.todo__header{
+  text-align: center;
+}
+.todo__title{
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  color:white;
+}
+.todo__description{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color:white;
+}
+.todo__input{
+  height:3rem;
+  border-radius:10px;
+  border:none;
+  font-size:20px;
+  padding:0 1rem;
+  width:70%;
+  display: inline;
+}
+.todo__button{
+  display: inline;
+  height:3rem;
+  margin-left: 0.5rem;
+  border-radius:10px;
+  border:none;
+  background-color: white;
+  cursor: pointer;
+  width:auto;
+}
+.todo__input:focus{
+  outline:3px black solid;
+}
+.todo__list{
+  margin: 2rem 0 0 0;
+  padding:0 1rem; 
+  overflow-y:hidden;
+}
+.todo__list:hover{
+  overflow-y:auto;
+}
+.todo__list::-webkit-scrollbar{
+  width:10px;
+}
+
+.todo__list::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #f2f2f2;
+  }
+
+
+
